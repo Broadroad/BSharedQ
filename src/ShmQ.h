@@ -28,7 +28,7 @@ public:
              allocator_(segment_.get_segment_manager()
              ){
         
-        queue = segment.find_or_construct<shm::ring_buffer>("queue")();
+        queue = segment_.find_or_construct<shm::ring_buffer>("queue")();
     }
     shm::ring_buffer* GetQueue() {
         return queue;
