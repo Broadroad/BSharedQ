@@ -11,7 +11,7 @@ public:
     Request(string id, string data);
     ~Request();
 
-    string RequestId() {return requstid_;}
+    string RequestId() {return requestid_;}
     string Data() {return data_;}
 };
 

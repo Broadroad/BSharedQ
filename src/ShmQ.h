@@ -9,9 +9,9 @@ namespace bip = boost::interprocess;
 namespace bl = boost::lockfree;
 
 namespace shm {
-
-typedef bip::allocator<Request, managed_shared_memory_t::segment_manager> allocator_t;
+    
 typedef bip::managed_shared_memory managed_shared_memory_t;
+typedef bip::allocator<Request, managed_shared_memory_t::segment_manager> allocator_t;
 typedef bl::queue<Request, bl::fixed_sized<true>, bl::capacity<500>> ring_buffer;
 
 class ShmQ {
